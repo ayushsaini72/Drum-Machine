@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: 700;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+}
+
+#drum-machine {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(59, 59, 59);
+
+  border: 7px solid rgb(26, 248, 248);
+  border-radius: 5px;
+
+  width: 85vw;
+  height: 50vh;
+}
+
+#buttons-container {
+  padding: 50px 10px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  height: 100%;
+  width: 70%;
+}
+
+
+
+.drum-pad {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-content: center;
+  background-color: rgb(26, 248, 248);
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+
+  border: none;
+  outline: none;
+}
+
+#display {
+ width: 30%; 
+ height: 100%;
+
+ display: grid;
+ place-items: center;
+}
+
+#display div {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  height: 40px;
+  width: 70%;
+  text-align: center;
+
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+
+@media screen and (max-width: 768px) {
+  #drum-machine {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    border: none;
+    border-radius: 0;
+
+    padding-bottom: 20px;
+  }
+
+  #buttons-container {
+    width: 100%;
+  }
+
+  #display {
+    height: auto;
+    width: 100%;
+  }
+
+  #display div {
+    width: 50vw;
+    height: 50px;
+    text-align: center;
+    display: grid;
+    place-items: center;
+  }
+}
